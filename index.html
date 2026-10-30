@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tiếng Anh 10 – Kiểm tra giữa HK I</title>
+<style>
+:root{--bg:#f6f7f4;--card:#fff;--ink:#1d2421;--mut:#69746e;--line:#dde2dc;--acc:#1f6f5c;--accb:#e3f1ec;--ok:#1e8a4c;--okb:#e0f3e8;--no:#c0392b;--nob:#fbe5e2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#1b2220;--ink:#e8eeea;--mut:#9aa6a0;--line:#2c3632;--acc:#5fc3a6;--accb:#1d3029;--ok:#5fd08a;--okb:#18321f;--no:#f08577;--nob:#3a1f1c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121715;--card:#1b2220;--ink:#e8eeea;--mut:#9aa6a0;--line:#2c3632;--acc:#5fc3a6;--accb:#1d3029;--ok:#5fd08a;--okb:#18321f;--no:#f08577;--nob:#3a1f1c;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+main{max-width:640px;margin:0 auto;padding:16px}
+h1{font-size:1.45rem;margin:8px 0 4px}
+h2{font-size:1.1rem;margin:20px 0 8px}
+.mut{color:var(--mut);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.chip{flex:1 1 60px;min-height:44px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;font:inherit;font-weight:600;cursor:pointer}
+.chip.on{border-color:var(--acc);background:var(--accb);color:var(--acc)}
+.btn{display:block;width:100%;min-height:50px;border:0;border-radius:12px;background:var(--acc);color:#fff;font:inherit;font-weight:700;font-size:1.05rem;cursor:pointer;margin-top:12px}
+:root[data-theme="dark"] .btn{color:#0b1512}
+.btn.sec{background:var(--card);color:var(--acc);border:1.5px solid var(--acc)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.9rem}
+.bar{height:8px;background:var(--line);border-radius:6px;overflow:hidden;margin:8px 0}
+.bar i{display:block;height:100%;background:var(--acc);width:100%}
+.bar.warn i{background:var(--no)}
+.tag{display:inline-block;font-size:.8rem;padding:2px 10px;border-radius:20px;background:var(--accb);color:var(--acc);font-weight:600}
+.q{font-size:1.08rem;font-weight:600;margin:10px 0}
+.pass{white-space:pre-line;font-size:.95rem;background:var(--bg);border-radius:10px;padding:10px 12px;margin:8px 0;max-height:40vh;overflow:auto}
+details summary{cursor:pointer;font-weight:600;color:var(--acc)}
+.opt{display:flex;gap:10px;width:100%;text-align:left;min-height:50px;align-items:center;padding:10px 12px;margin:8px 0;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;font:inherit;cursor:pointer}
+.opt b{flex:0 0 26px;height:26px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-size:.85rem}
+.opt.ok{border-color:var(--ok);background:var(--okb)}
+.opt.no{border-color:var(--no);background:var(--nob)}
+.opt[disabled]{cursor:default}
+.fb{padding:10px 12px;border-radius:10px;margin-top:10px;font-size:.95rem}
+.fb.ok{background:var(--okb)}.fb.no{background:var(--nob)}
+u{text-underline-offset:3px;text-decoration-thickness:2px}
+.score{font-size:2.6rem;font-weight:800;color:var(--acc);margin:0}
+.st{margin:10px 0}
+.st .h{display:flex;justify-content:space-between;font-size:.92rem;gap:8px}
+.st .b{height:10px;background:var(--okb);border-radius:6px;overflow:hidden;margin-top:4px}
+.st .b i{display:block;height:100%;background:var(--no)}
+.rv{border-top:1px solid var(--line);padding:10px 0;font-size:.93rem}
+.rv:first-child{border-top:0}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+var P1="A GREENER SCHOOL\n\nSmall changes can make a big difference to the environment. At Green Hill School, students have started a project to reduce waste. Instead of buying bottled water every day, they bring reusable bottles and fill them at water stations. The school has also placed clearly labelled bins in the playground, (17) ______ students can separate paper, plastic and food waste.\n\nThe project does more than keep the school clean. It gives students an opportunity to (18) ______ useful habits and share their ideas with others. Last month, a group of volunteers made posters to remind everyone to use both sides of a sheet of paper. Their message was simple: we should think carefully before throwing things away.\n\nThe organisers know that not every idea will work immediately. (19) ______, they ask students for feedback and adjust their plans when necessary. They hope that these activities will inspire families to take similar (20) ______ at home. If everyone takes part, even a small school can make a positive (21) ______ on its community.";
+var P2="In many families, teenagers are expected to help with household chores. Some parents assign each child a fixed task, such as washing the dishes or taking out the rubbish. Others prefer to make a weekly list and let family members choose the jobs they can do. Although these approaches are different, both can help children understand that running a home requires effort from everyone.\n\nDoing chores also teaches practical skills. A teenager who learns to prepare a simple meal or organise a personal budget may find it easier to live independently in the future. Moreover, when family members work together, they often have more time to talk and share their experiences. A task that seems boring can become more enjoyable if people do it as a team.\n\nHowever, simply giving children a long list of jobs is not always effective. Parents need to consider their children’s age, schoolwork and other responsibilities. Clear instructions are important too: a young person may want to help but may not know how to complete a task properly. Instead of criticising every mistake, parents can offer guidance and recognise their child’s effort.\n\nIn the end, the aim is not to make children do all the housework. It is to help them become capable, responsible members of the family while keeping the workload fair.";
+var P3="A group of students in a coastal town noticed that plastic bottles and food containers often appeared on their local beach after weekends. They decided to organise a clean-up, but their first event attracted only twelve volunteers. The students collected several bags of rubbish and felt proud of their work. A week later, however, they returned to find that the beach was dirty again.\n\nRather than giving up, the group decided to find out where the waste came from. They spoke to visitors, shop owners and local residents. Some people said they could not find a bin nearby; others admitted that they had never thought about where their rubbish might end up. The students realised that collecting waste was necessary, but it would not solve the problem on its own.\n\nWith support from the local community, they placed more bins near popular picnic areas and designed signs encouraging visitors to take their rubbish home. They also shared short videos online to explain how plastic can harm sea animals. At their next clean-up, nearly fifty people joined, including several shop owners who had taken part in the discussions.\n\nThe beach is not completely free of litter now, and the students still organise clean-ups. Nevertheless, they have learned an important lesson: lasting change often requires both immediate action and a better understanding of the causes of a problem.";
+var T={pho:"Phát âm",str:"Trọng âm",voc:"Từ vựng & từ loại",ten:"Thì động từ",gr:"Cấu trúc ngữ pháp (V-to/V-ing, bị động, liên từ)",com:"Giao tiếp",clo:"Điền từ vào đoạn văn",main:"Đọc hiểu: ý chính, suy luận",det:"Đọc hiểu: chi tiết",wrd:"Đọc hiểu: từ vựng, đại từ thay thế",err:"Tìm lỗi sai",rew:"Viết lại câu (đồng nghĩa)",com2:"Kết hợp câu"};
+// [id,type,passage,question,options,answer,explanation]
+var Q=[
+[1,"pho",0,"Chọn từ có phần gạch chân phát âm khác.",["<u>c</u>lean","<u>c</u>ommunity","<u>c</u>entre","<u>c</u>ontribute"],2,"centre đọc /s/, các từ còn lại đọc /k/."],
+[2,"pho",0,"Chọn từ có phần gạch chân phát âm khác.",["wash<u>ed</u>","clean<u>ed</u>","recycl<u>ed</u>","organis<u>ed</u>"],0,"washed đọc /t/ (sau âm vô thanh /ʃ/), các từ còn lại đọc /d/."],
+[3,"str",0,"Chọn từ có trọng âm chính khác các từ còn lại.",["household","rubbish","talent","device"],3,"device nhấn âm 2; các từ còn lại nhấn âm 1."],
+[4,"str",0,"Chọn từ có trọng âm chính khác các từ còn lại.",["volunteer","develop","encourage","consider"],0,"volunteer nhấn âm 3 (-teer); các từ còn lại nhấn âm 2."],
+[5,"voc",0,"Sharing household chores helps children develop a sense of ______ and become more independent.",["responsibility","responsible","responsibly","respond"],0,"Sau “a sense of” cần danh từ: responsibility."],
+[6,"ten",0,"My sister usually ______ dinner, but this evening she is studying for a test.",["cooks","is cooking","cooked","has cooked"],0,"“usually” là thói quen, dùng hiện tại đơn."],
+[7,"ten",0,"Listen! Someone ______ the piano in the music room.",["practises","is practising","practised","has practised"],1,"“Listen!” cho biết việc đang xảy ra, dùng hiện tại tiếp diễn."],
+[8,"gr",0,"The school plans ______ a campaign to reduce single-use plastic next month.",["launch","launching","to launch","launched"],2,"plan + to V."],
+[9,"voc",0,"Students are encouraged to turn off the lights when they leave a room to ______ electricity.",["waste","save","produce","borrow"],1,"save electricity: tiết kiệm điện."],
+[10,"gr",0,"The rubbish ______ into different groups before it is sent for recycling.",["sorts","is sorted","is sorting","sorted"],1,"Rác “được” phân loại: bị động hiện tại đơn is sorted."],
+[11,"gr",0,"Our class wanted to plant trees in the schoolyard, ______ we asked the teachers for permission.",["but","or","so","for"],2,"Vế sau là kết quả của vế trước: so."],
+[12,"ten",0,"Nam has just bought some paint and brushes. He ______ the old bookcase this afternoon.",["is going to paint","paints","painted","has painted"],0,"Dự định có căn cứ (đã mua sơn, cọ): be going to."],
+[13,"voc",0,"The local club is looking for volunteers to ______ care of abandoned animals.",["do","make","take","give"],2,"take care of: chăm sóc."],
+[14,"voc",0,"The documentary made us more aware ______ the effects of plastic waste on marine animals.",["in","of","with","for"],1,"aware of: nhận thức về."],
+[15,"com",0,"Lan: “Why don’t we invite our classmates to join the clean-up?” Minh: “______”",["That’s a great idea.","Never mind. It was my fault.","You’re welcome.","I’m afraid I don’t know him."],0,"Đáp lại lời đề nghị: đồng ý bằng “That’s a great idea.”"],
+[16,"com",0,"Mai: “Could you show me how to use this recycling machine?” Tom: “______”",["Not at all. I don’t use it.","Sure. First, put the bottles in here.","Yes, I could use it yesterday.","No, you needn’t show me."],1,"Đồng ý giúp và hướng dẫn: “Sure. First, put the bottles in here.”"],
+[17,"clo",1,"Blank (17)",["so that","although","because of","unless"],0,"so that + mệnh đề: để mà (chỉ mục đích)."],
+[18,"clo",1,"Blank (18)",["develop","prevent","refuse","destroy"],0,"develop useful habits: hình thành thói quen tốt."],
+[19,"clo",1,"Blank (19)",["However","Therefore","Otherwise","For example"],0,"Ý đối lập: không phải ý nào cũng hiệu quả ngay. However (tuy nhiên), họ vẫn xin phản hồi."],
+[20,"clo",1,"Blank (20)",["actions","breaks","risks","notes"],0,"take similar actions: có hành động tương tự."],
+[21,"clo",1,"Blank (21)",["decision","effort","impact","excuse"],2,"make a positive impact on: tạo tác động tích cực lên."],
+[22,"main",2,"What is the passage mainly about?",["Ways to reduce the amount of schoolwork teenagers receive","The benefits of sharing chores and ways to make it work","Reasons why parents should do all household tasks","The history of housework in different countries"],1,"Bài nói về lợi ích của việc chia sẻ việc nhà và cách làm cho hiệu quả."],
+[23,"det",2,"According to the first paragraph, some families allow their members to ______.",["choose jobs from a weekly list","avoid all difficult tasks","do the same task every day","ask neighbours to do the chores"],0,"Đoạn 1: “make a weekly list and let family members choose the jobs”."],
+[24,"wrd",2,"The word “practical” in paragraph 2 is closest in meaning to ______.",["useful","unusual","expensive","entertaining"],0,"practical (thiết thực) ≈ useful."],
+[25,"wrd",2,"The word “it” in paragraph 3 refers to ______.",["a long list","schoolwork","a task","guidance"],2,"Câu: “…may not know how to complete a task properly”: it thay cho a task."],
+[26,"det",2,"Which of the following is NOT mentioned as something parents should consider when assigning chores?",["Their children’s age","Their children’s schoolwork","Their children’s other responsibilities","Their children’s favourite school subjects"],3,"Đoạn 3 nêu tuổi, bài vở, trách nhiệm khác; không nhắc môn học yêu thích."],
+[27,"main",2,"What can be inferred from the passage?",["Children can only learn responsibility at school.","Fairly assigned chores can benefit both children and the family.","Parents should correct every small mistake immediately.","Family members have less time to communicate when they share chores."],1,"Cả bài cho thấy việc nhà chia hợp lý có lợi cho trẻ và gia đình."],
+[28,"det",3,"Why did the students decide to organise their first clean-up?",["They wanted to prepare the beach for a sports competition.","They noticed waste on the beach after weekends.","Local shop owners asked them to collect plastic bottles.","They needed material for an online video."],1,"Đoạn 1: rác xuất hiện trên bãi biển sau các cuối tuần."],
+[29,"det",3,"What did the students discover when they returned a week after the first event?",["More bins had been placed near the beach.","Fifty volunteers were waiting to help.","The beach had become dirty again.","All the local shops had closed."],2,"Đoạn 1: “the beach was dirty again”."],
+[30,"wrd",3,"The word “it” in paragraph 2 refers to ______.",["collecting waste","talking to visitors","finding a bin","joining the group"],0,"“collecting waste was necessary, but it would not solve the problem”."],
+[31,"wrd",3,"The word “lasting” in paragraph 4 is closest in meaning to ______.",["continuing for a long time","happening by accident","requiring little effort","affecting only a small area"],0,"lasting change: thay đổi bền vững = kéo dài lâu."],
+[32,"det",3,"Which of the following did the group do after speaking to people in the community?",["They stopped organising clean-ups.","They asked all shops to stop selling food.","They placed more bins and created signs.","They removed all picnic areas from the beach."],2,"Đoạn 3: đặt thêm thùng rác và làm biển báo."],
+[33,"main",3,"Which statement best expresses the lesson the students learned?",["Online videos are more effective than community discussions.","A problem is always solved after one successful event.","Understanding a problem’s causes can help people create more lasting change.","Environmental projects should only involve young people."],2,"Câu cuối bài: thay đổi bền vững cần hành động ngay và hiểu nguyên nhân."],
+[34,"err","", "My brother <u>usually</u> <u>is walking</u> to school, but today he <u>is taking</u> the bus <u>because it is raining</u>.",["usually","is walking","is taking","because it is raining"],1,"“usually” chỉ thói quen: is walking → walks."],
+[35,"err","", "The students <u>are planning</u> <u>organising</u> a concert <u>to raise</u> money for a local <u>children’s charity</u>.",["are planning","organising","to raise","children’s charity"],1,"plan + to V: organising → to organise."],
+[36,"rew",0,"People collect used batteries at this community centre.",["Used batteries collect at this community centre.","Used batteries are collected at this community centre.","Used batteries are collecting at this community centre.","Used batteries collected at this community centre."],1,"Bị động hiện tại đơn: are collected."],
+[37,"rew",0,"It is a good idea for students to bring reusable bags when they go shopping.",["Students should bring reusable bags when they go shopping.","Students must not bring reusable bags when they go shopping.","Students are unable to bring reusable bags when they go shopping.","Students used to bring reusable bags when they went shopping."],0,"“It is a good idea to…” = should."],
+[38,"rew",0,"The last time I visited my grandparents was two weeks ago.",["I have visited my grandparents for two weeks.","I didn’t visit my grandparents two weeks ago.","I haven’t visited my grandparents for two weeks.","I am visiting my grandparents in two weeks."],2,"The last time … was + khoảng thời gian ago = haven’t + V3 + for + khoảng thời gian."],
+[39,"com2",0,"The weather was very hot. The volunteers continued planting trees.",["The volunteers continued planting trees because the weather was very hot.","Although the weather was very hot, the volunteers continued planting trees.","The weather was very hot, so the volunteers stopped planting trees.","The volunteers continued planting trees, or the weather was very hot."],1,"Quan hệ nhượng bộ: Although…"],
+[40,"com2",0,"Linh wants to improve her English. She joins an English-speaking club.",["Linh joins an English-speaking club to improve her English.","Linh joins an English-speaking club, but she wants to improve her English.","Linh wants to improve her English because she leaves the club.","Linh joins an English-speaking club without wanting to improve her English."],0,"Chỉ mục đích: to + V."]
+];
+var PS=[null,P1,P2,P3];
+var app=document.getElementById("app"),cfg={n:40,sec:60,shuf:true},S=null,tm=null;
+function $(h){app.innerHTML=h;window.scrollTo(0,0)}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function chips(key,vals,fmt){return '<div class="row">'+vals.map(function(v){return '<button class="chip'+(cfg[key]===v?' on':'')+'" onclick="setCfg(\''+key+'\','+JSON.stringify(v)+')">'+fmt(v)+'</button>'}).join("")+'</div>'}
+function setCfg(k,v){cfg[k]=v;home()}
+function home(){
+$('<h1>Tiếng Anh 10 – Kiểm tra giữa HK I</h1><p class="mut">Năm học 2026–2027 · 40 câu · tự chấm điểm · giới hạn thời gian cho từng câu</p>'+
+'<div class="card"><b>Số câu</b>'+chips("n",[10,20,40],function(v){return v+" câu"})+
+'<b>Thời gian mỗi câu</b>'+chips("sec",[30,45,60,90],function(v){return v+" giây"})+
+'<b>Thứ tự câu hỏi</b>'+chips("shuf",[true,false],function(v){return v?"Xáo trộn":"Theo đề"})+
+'<button class="btn" onclick="start()">Bắt đầu làm bài</button></div>'+
+'<p class="mut">Đề gốc không kèm đáp án nên đáp án và phần giải thích do Claude tự giải. Hãy đối chiếu với giáo viên nếu có chỗ nghi ngờ.</p>')}
+function start(ids){
+var list=ids?Q.filter(function(q){return ids.indexOf(q[0])>=0}):Q.slice();
+if(!ids){if(cfg.shuf)list=shuffle(list);else list.sort(function(a,b){return a[0]-b[0]});list=list.slice(0,cfg.n)}
+else if(cfg.shuf)list=shuffle(list);
+S={list:list,i:0,res:[]};show()}
+function show(){
+clearInterval(tm);var q=S.list[S.i],tot=S.list.length;S.done=false;S.end=Date.now()+cfg.sec*1000;
+var h='<div class="top"><span>Câu '+(S.i+1)+'/'+tot+'</span><span class="tag">'+T[q[1]]+'</span><b id="t">'+cfg.sec+'s</b></div>'+
+'<div class="bar" id="bar"><i id="fill"></i></div><div class="card">';
+if(q[2])h+='<details open><summary>Đoạn văn</summary><div class="pass">'+PS[q[2]]+'</div></details>';
+h+='<div class="q">'+q[3]+'</div>';
+q[4].forEach(function(o,k){h+='<button class="opt" onclick="pick('+k+')"><b>'+"ABCD"[k]+'</b><span>'+o+'</span></button>'});
+h+='<div id="fb"></div></div><div id="nx"></div>';
+$(h);tm=setInterval(tick,200)}
+function tick(){
+var left=Math.max(0,(S.end-Date.now())/1000);
+document.getElementById("t").textContent=Math.ceil(left)+"s";
+document.getElementById("fill").style.width=(left/cfg.sec*100)+"%";
+if(left<=10)document.getElementById("bar").className="bar warn";
+if(left<=0)pick(-1)}
+function pick(k){
+if(S.done)return;S.done=true;clearInterval(tm);
+var q=S.list[S.i],ok=k===q[5],to=k<0;
+S.res.push({q:q,k:k,ok:ok,to:to,sec:Math.round(cfg.sec-Math.max(0,(S.end-Date.now())/1000))});
+var os=document.querySelectorAll(".opt");
+os.forEach(function(b,j){b.disabled=true;if(j===q[5])b.classList.add("ok");else if(j===k)b.classList.add("no")});
+document.getElementById("fb").innerHTML='<div class="fb '+(ok?'ok':'no')+'"><b>'+(ok?"Chính xác!":to?"Hết giờ. Đáp án: "+"ABCD"[q[5]]:"Chưa đúng. Đáp án: "+"ABCD"[q[5]])+'</b><br>'+q[6]+'</div>';
+var last=S.i===S.list.length-1;
+document.getElementById("nx").innerHTML='<button class="btn" onclick="next()">'+(last?"Xem kết quả":"Câu tiếp theo")+'</button>';
+document.getElementById("nx").scrollIntoView({block:"nearest",behavior:"smooth"})}
+function next(){S.i++;if(S.i>=S.list.length)result();else show()}
+function result(){
+var r=S.res,n=r.length,c=r.filter(function(x){return x.ok}).length,wrong=r.filter(function(x){return !x.ok});
+var by={};r.forEach(function(x){var t=x.q[1];by[t]=by[t]||{n:0,w:0};by[t].n++;if(!x.ok)by[t].w++});
+var rows=Object.keys(by).map(function(t){return{t:t,n:by[t].n,w:by[t].w,p:by[t].w/by[t].n}}).sort(function(a,b){return b.p-a.p||b.w-a.w});
+var h='<h1>Kết quả</h1><div class="card"><p class="score">'+(c/n*10).toFixed(2).replace(/\.?0+$/,"")+'/10</p><p>Đúng '+c+'/'+n+' câu · sai '+(n-c)+' câu (trong đó hết giờ '+r.filter(function(x){return x.to}).length+')</p></div>';
+h+='<h2>Dạng câu hay sai nhất</h2><div class="card">';
+rows.forEach(function(x){h+='<div class="st"><div class="h"><span>'+T[x.t]+'</span><b>'+x.w+'/'+x.n+' sai ('+Math.round(x.p*100)+'%)</b></div><div class="b"><i style="width:'+(x.p*100)+'%"></i></div></div>'});
+var worst=rows.filter(function(x){return x.w>0});
+if(worst.length)h+='<p class="mut">Nên ôn trước: <b>'+worst.slice(0,3).map(function(x){return T[x.t]}).join("; ")+'</b>.</p>';
+else h+='<p class="mut">Bạn làm đúng toàn bộ.</p>';
+h+='</div>';
+if(wrong.length){h+='<h2>Các câu cần xem lại</h2><div class="card">';
+wrong.forEach(function(x){var q=x.q;h+='<div class="rv"><b>Câu '+q[0]+'</b> <span class="tag">'+T[q[1]]+'</span><br>'+q[3]+'<br>'+(x.k>=0?'Bạn chọn: <span style="color:var(--no)">'+"ABCD"[x.k]+'. '+q[4][x.k]+'</span><br>':'<span style="color:var(--no)">Hết giờ</span><br>')+'Đáp án: <span style="color:var(--ok)"><b>'+"ABCD"[q[5]]+'. '+q[4][q[5]]+'</b></span><br><span class="mut">'+q[6]+'</span></div>'});
+h+='</div><button class="btn" onclick="start(window.WR)">Làm lại các câu sai</button>';
+window.WR=wrong.map(function(x){return x.q[0]})}
+h+='<button class="btn sec" onclick="home()">Về màn hình chính</button>';
+$(h)}
+home();
+</script>
+</body>
+</html>
